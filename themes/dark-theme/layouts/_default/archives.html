@@ -1,0 +1,38 @@
+<!-- {{- define "main" }}
+<section class="s:mt-10">
+    <div class="container sm:my-14">
+      <div class="flex flex-col sm:flex-row ">  
+        <div class="w-full sm:w-10 sm:mt-10">
+          {{.Content}}
+
+          <div class="archive-container ">
+                <div class="archive-list-container">
+                    <div class="archive-item">
+
+                        {{ range (.Site.RegularPages.GroupByDate "2006") }}
+                        <div class="archive-item-header">
+                            <span class="archive-year">{{ .Key }}</span>
+                            <span class="archive-year-post-count">[ ]</span>
+
+                        </div>
+                        <ul class="archive-list">
+                            {{ range (where .Pages "Type" "posts") }}
+                                <li class="article-item">
+                                    <a   class="article-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                    <span class="article-date" > {{ .PublishDate.Format "02 Jan" }}</span>
+                                </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+
+                    </div>
+                    
+                </div>
+            </div>
+
+  
+        </div>
+      </div>
+    </div>
+  </section>
+{{- end }} -->

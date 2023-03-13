@@ -1,0 +1,98 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'hello'
+theme = 'dark-theme'
+description = "Hi"
+copyright= "who desgin"
+
+sectionPagesMenu = "main"
+
+# If false, English tags like `Getting Started` will be converted to `getting-started
+preserveTaxonomyNames = true
+# Automatically detects if Chinese/Japanese/Korean is included, this parameter affects the summary and word count functions and is recommended to be set to true
+hasCJKLanguage = false
+enableGitInfo = true
+
+# Pagination
+paginate = 10
+paginatePath = "page"
+
+# enable Emoji; see emoji-cheat-sheet.com
+enableEmoji = false
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
+
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
+
+[params]
+	keywords = "blog,life,code,desgin"
+  author = "Author Name"
+  homepage = "homepage"
+  email = "myeamil"
+  avatar = "https://advance.biz-tech-insights.com/Rapid7-Security-Information-LE2/2/img/stubs/avatar/j.gif"
+  description = "description here"
+  aboutImage = "https://photo.tuchong.com/7194943/f/1141846321.jpg"
+  [[params.social]]
+      url   = "https://twitter.com/"
+      icon  = "fa-brands fa-twitter fa-lg"
+  [[params.social]]
+      url   = "https://facebook.com/"
+      icon  = "fa-brands fa-facebook fa-lg" 
+  [[params.social]]
+      url   = "https://linkedin.com/"
+      icon  = "fa-brands fa-linkedin fa-lg"
+  [[params.social]]
+      url = "https://linkedin.com/"  
+      icon = "fa-brands fa-instagram fa-lg" 
+  [params.busuanzi_count]
+    enable = true
+    site_uv = true
+    site_pv = true
+    page_pv = true
+
+
+[markup]
+    [goldmark]
+        [renderer]
+            unsafe= true
+            hardWraps = false
+            xhtml = false
+
+
+
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "My Project"
+    pre = "posts"
+    url = "/posts/"
+    identifier = "posts"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    pre = "tag"
+    identifier = "tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "Abouts"
+    pre = "about"
+    identifier = "about"
+    url = "/about/"
+    weight = 4

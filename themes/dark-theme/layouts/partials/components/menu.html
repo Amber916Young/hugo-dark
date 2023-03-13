@@ -1,0 +1,8 @@
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+<a href="{{ .URL }}" title="{{ .Name }}">
+  <li class="hover {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+    {{ .Name }}
+  </li>
+</a>
+{{ end }}
