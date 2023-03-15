@@ -5,7 +5,6 @@ theme = 'dark-theme'
 description = "Hi"
 copyright= "who desgin"
 
-sectionPagesMenu = "main"
 
 # If false, English tags like `Getting Started` will be converted to `getting-started
 preserveTaxonomyNames = true
@@ -62,16 +61,16 @@ expiryDate = ["expiryDate"]
     page_pv = true
 
 
+# allow md file shows HTML format
 [markup]
-    [goldmark]
-        [renderer]
-            unsafe= true
-            hardWraps = false
-            xhtml = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe= true
+      hardWraps = false
+      xhtml = false
 
-
-
-
+# setup menu
+sectionPagesMenu = "main"
 [menu]
   [[menu.main]]
     name = "Home"
@@ -96,3 +95,8 @@ expiryDate = ["expiryDate"]
     identifier = "about"
     url = "/about/"
     weight = 4
+
+
+# code block buil-in tool
+pygmentsUseClasses=true
+pygmentsCodeFences=true

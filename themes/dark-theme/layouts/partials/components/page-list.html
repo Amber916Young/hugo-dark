@@ -1,6 +1,0 @@
-
-{{ range first 3 ( where .Site.Pages "Type" "blog" ) }}
-    {{ .Render "/archive" }}
-
-{{ end }}
-{{ template "_internal/pagination.html" . }}

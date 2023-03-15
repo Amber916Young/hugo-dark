@@ -92,15 +92,7 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
+
 
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
@@ -306,22 +298,6 @@ summary {
 Removes the default spacing and border for appropriate elements.
 */
 
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
 fieldset {
   margin: 0;
   padding: 0;
@@ -331,13 +307,6 @@ legend {
   padding: 0;
 }
 
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 /*
 Prevent resizing textareas horizontally by default.
@@ -1155,6 +1124,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
+
+
+#menu ul li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .overlay ul li a:hover:after,
 .overlay ul li a:focus:after,
 .overlay ul li a:active:after {

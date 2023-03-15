@@ -46,11 +46,17 @@
     transition-timing-function: ease,ease,ease,ease;
 }
 
-li, ol, ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+
+pre,
+code,
+caption,
+figcaption {
+  font-size: .9em;
+  font-family: SF Mono, monaco, -apple-system, roboto mono, monospace;
+  font-weight: normal;
+  font-style: normal
 }
+
 .d-flex {
     display: flex !important;
 }
@@ -165,7 +171,9 @@ li, ol, ul {
 	float:right
 }
 
-
+.page-content img{
+	margin: auto;
+}
 header{
 	position: sticky;
 	top: 0;
@@ -225,15 +233,14 @@ header{
   
   .pagination-ctrl__btn {
 	display: block;
-	background-color: #06c;
 	border-radius: 100%;
 	font-size: 36px;
 	height: 1em;
+	width: 1em;
 	line-height: 1em;
 	position: relative;
 	text-align: center;
 	transition: background-color 0.3s ease;
-	width: 1em
   }
   
   .pagination-ctrl__btn.hide {
@@ -689,9 +696,30 @@ header{
 }
 .article-tags li, .article-meta-info .article-tags ul {
     display: inline;
+	margin: 0;
+	padding: 0;
 }
 
-
-/* 404 */
-
-
+.highlight {
+    position: relative;
+}
+.highlight pre {
+    padding-right: 0px;
+}
+.highlight-copy-btn {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    border: 0;
+    border-radius: 4px;
+    padding: 1px;
+    font-size: 0.7em;
+    line-height: 1.8;
+    color: #fff;
+    background-color: #777;
+    min-width: 55px;
+    text-align: center;
+}
+.highlight-copy-btn:hover {
+    background-color: #666;
+}
